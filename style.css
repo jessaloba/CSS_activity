@@ -1,0 +1,56 @@
+@keyframes relleno {
+    0% {fill: rgb(233, 233, 169); left: 0px; top: 0px;}
+    25% {fill: rgb(163, 217, 237); left: 50px; top:-50px;}
+    50% {fill:rgb(165, 163, 237); left: 100px; top: 0px;}
+    75% {fill:rgb(237, 163, 225); left: 150px; top:-50px;}
+    100% {fill: rgb(237, 163, 175); left: 200px; top: 0px;}
+}
+
+@keyframes rotacion{
+    from {transform: rotate(10deg);}
+    to {transform: rotate(360deg);}
+}
+  
+  
+body{
+    text-align: center;
+    margin-top: 0px;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#letraJ{
+    width: 150px;
+    fill: purple;
+    transition: width 2s;
+    transition-timing-function: ease-out;
+
+}
+#letraJ:hover{
+    width: 300px;
+}
+
+#stars{
+    width: 200px;
+    fill: yellow;
+    stroke-width: 2px;
+    position: relative;
+    animation-name: relleno;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+#crown{
+    width:200px;
+    fill: blue;
+    animation: rotacion 3s linear .5s infinite forwards;
+}
+
